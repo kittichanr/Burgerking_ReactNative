@@ -86,16 +86,19 @@ const TabScreen = createBottomTabNavigator(
                     TextHeader = 'REWARD';
                 } if (routeName === 'Tracking') {
                     TextHeader = 'TRACKING';
-                } if (routeName === 'More') {
-                    TextHeader = 'MORE';
                 } 
+        const headerhide = routeName === 'More' ? null :
+        console.log(headerhide)
          return{
             headerStyle:{
                 backgroundColor:'#ff9100'
             },
             headerTitle:(
                 <Header routeName={routeName} TextHeader={TextHeader} />
-            )
+            ),
+            header:headerhide
+                
+            
          }
         
     }
