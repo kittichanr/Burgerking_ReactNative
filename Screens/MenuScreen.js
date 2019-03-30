@@ -36,7 +36,7 @@ export default class MenuScreen extends Component {
   }
 
   renderItem=({item})=>{
-    return <ItemList item={item}/>
+    return (<ItemList item={item}/>)
   }
 
   render() {

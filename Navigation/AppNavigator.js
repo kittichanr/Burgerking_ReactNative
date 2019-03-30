@@ -9,7 +9,7 @@ import MenuScreen from '../Screens/MenuScreen'
 import RewardScreen from '../Screens/RewardScreen'
 import TrackingScreen from '../Screens/TrackingScreen'
 import MoreScreen from '../Screens/MoreScreen'
-
+import Header from '../Components/Header'
 
 const TabScreen = createBottomTabNavigator(
     {Home: {
@@ -69,28 +69,35 @@ const TabScreen = createBottomTabNavigator(
             fontSize:12
         },
       }
-    },
-    
-        
+    },     
     ); 
 
-     TabScreen.navigationOptions={
-        headerStyle:{
-                        backgroundColor:'#ff9100'
-                    },
-        headerTitle:(
-            <View style={{flex:1,flexDirection:'row'}}>
-                <View style={{flex:1,alignItems:'flex-start'}}>
-                    <Icon  name="bell"  style={{fontSize: 40,margin:5,color:'white'}} />
-                </View>
-                <View style={{flex:1,alignItems:'center'}}>
-                     <Image source={require('../Image/burgerking_logo.png')} style={{width:50,height:50,borderRadius:23}}/>
-                </View>
-                <View style={{flex:1,alignItems:'flex-end'}}>
-                <Icon  name="bag"  style={{fontSize: 40,margin:5,color:'white'}}/>
-                </View>
-            </View>
-                    )
+    
+
+     TabScreen.navigationOptions=({navigation})=>{
+        const {index, routes} = navigation.state;
+        const {routeName} = routes[index];
+        let TextHeader;
+                if (routeName ==='Home') {
+                    TextHeader = 'HOME';
+                } if (routeName === 'Menu') {
+                    TextHeader = 'MENU';
+                } if (routeName === 'Reward') {
+                    TextHeader = 'REWARD';
+                } if (routeName === 'Tracking') {
+                    TextHeader = 'TRACKING';
+                } if (routeName === 'More') {
+                    TextHeader = 'MORE';
+                } 
+         return{
+            headerStyle:{
+                backgroundColor:'#ff9100'
+            },
+            headerTitle:(
+                <Header routeName={routeName} TextHeader={TextHeader} />
+            )
+         }
+        
     }
 
 const AppNavigator = createStackNavigator(

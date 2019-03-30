@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text ,ImageBackground,ScrollView,Image,StyleSheet,TouchableOpacity} from 'react-native';
 import PagingPromotion from '../Components/Home/PagingPromotion'
-import TypeFood from '../Components/Home/TypeFood'
+import TypeSelect from '../Components/Menu/TypeSelect'
 import BestSeller from '../Components/Home/BestSeller'
 import JustforyouReward from '../Components/Home/JustforyouReward'
 import Icon from 'react-native-vector-icons/SimpleLineIcons'
 export default class HomeScreen extends Component {
+    
   constructor(props) {
     super(props);
     this.state = {
@@ -61,7 +62,14 @@ export default class HomeScreen extends Component {
           </View>
       </View>
       <PagingPromotion/>
-      <TypeFood/>
+      <ScrollView style={{margin: 15,}} horizontal='true' >
+              <TypeSelect name="LIMITED TIME ONLY" pic={require("./../Image/Menu/limited.png")} />
+              <TypeSelect name="VALUE MEALS" pic={require("./../Image/Menu/meal.png")}/>
+              <TypeSelect name="A LA CARTE" pic={require("./../Image/Menu/alacarte.png")}/>
+              <TypeSelect name="SIDES" pic={require("./../Image/Menu/side.png")}/>
+              <TypeSelect name="DESSERTS" pic={require("./../Image/Menu/dessert.png")}/>
+              <TypeSelect name="BEVERAGES" pic={require("./../Image/Menu/bev.png")} />
+            </ScrollView>
       <BestSeller/>
       <JustforyouReward/>
       </ScrollView>
