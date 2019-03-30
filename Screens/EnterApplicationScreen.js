@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View , Image,Dimensions,ImageBackground,TouchableOpacity} from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import { NavigationActions } from 'react-navigation'
 
 const horizontalMargin = 20;
 const sliderWidth = Dimensions.get('window').width;
