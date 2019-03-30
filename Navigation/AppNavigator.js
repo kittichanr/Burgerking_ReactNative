@@ -13,7 +13,12 @@ import  All_RewardScreen from '../Screens/All_RewardScreen'
 import  Rabbit_RewardScreen from '../Screens/Rabbit_RewardScreen'
 import  SeeDetail from '../Screens/SeeDetail'
 import Header from '../Components/Header'
-
+import ProfileScreen from '../Screens/ProfileScreen'
+import StoreScreen from '../Screens/StoreScreen'
+import TermScreen from '../Screens/TermScreen'
+import PolicyScreen from '../Screens/PolicyScreen'
+import ContactScreen from '../Screens/ContactScreen'
+import HelpScreen from '../Screens/HelpScreen'
 
 const Reward = createMaterialTopTabNavigator(
     {
@@ -150,6 +155,47 @@ const AppNavigator = createStackNavigator(
     },
     Detail:{
         screen:SeeDetail
+    },
+    Profile:{
+        screen:ProfileScreen 
+    },
+    Store:{
+        screen:StoreScreen 
+    },
+    Term:{
+        screen:TermScreen  ,
+        navigationOptions:{
+            header:null
+        }
+    },
+    Policy:{
+        screen:PolicyScreen ,
+        navigationOptions:{
+            header:null
+        }
+    },
+    Contact:{
+        screen:ContactScreen  ,
+        navigationOptions:{
+            header:null
+        }
+    },
+    Help:{
+        screen:HelpScreen 
+    },
+    Tracking2:{
+        screen:TrackingScreen,
+        navigationOptions:{
+            title:'TRACKING ORDER',
+            headerStyle: {
+                backgroundColor:'#ff9100',
+              },
+            
+            headerTitleStyle: {
+                color: 'white',
+                fontFamily:"Insanibc"
+              }
+        },
     },
     Main:TabScreen
      },
