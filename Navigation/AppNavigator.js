@@ -2,14 +2,51 @@ import React, { Component } from 'react';
 import { Image,View } from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { createStackNavigator, createAppContainer,createBottomTabNavigator} from 'react-navigation' ; 
+import { createStackNavigator, createAppContainer,createBottomTabNavigator,createMaterialTopTabNavigator} from 'react-navigation' ; 
 import EnterApplicationScreen from '../Screens/EnterApplicationScreen'
 import HomeScreen from '../Screens/HomeScreen'
 import MenuScreen from '../Screens/MenuScreen'
-import RewardScreen from '../Screens/RewardScreen'
 import TrackingScreen from '../Screens/TrackingScreen'
 import MoreScreen from '../Screens/MoreScreen'
+import  MyLevel_RewardScreen from '../Screens/MyLevel_RewardScreen'
+import  All_RewardScreen from '../Screens/All_RewardScreen'
+import  Rabbit_RewardScreen from '../Screens/Rabbit_RewardScreen'
+import  SeeDetail from '../Screens/SeeDetail'
 import Header from '../Components/Header'
+
+
+const Reward = createMaterialTopTabNavigator(
+    {
+        Mylevel:{
+            screen:MyLevel_RewardScreen,
+            navigationOptions:{
+                title:'My level'
+            }
+        },
+        All:{
+            screen:All_RewardScreen
+        },
+        Rabbit:{
+            screen:Rabbit_RewardScreen
+        },
+        
+    },{
+        tabBarOptions:{
+            style: {
+               backgroundColor:'white',
+              },
+            labelStyle :{
+                color:'#ff9100',
+                fontFamily:'Insanibc',
+                fontSize:16
+              },
+            activeTintColor:'#ff9100',
+            indicatorStyle:{
+                borderBottomColor:'#ff9100',
+            }
+        }
+    }
+)
 
 const TabScreen = createBottomTabNavigator(
     {Home: {
@@ -31,7 +68,7 @@ const TabScreen = createBottomTabNavigator(
     }
     },
     Reward:{
-        screen:RewardScreen,
+        screen:Reward,
         navigationOptions:{
             title:'Reward',
             tabBarIcon: ({ tintColor }) => (
@@ -87,8 +124,8 @@ const TabScreen = createBottomTabNavigator(
                 } if (routeName === 'Tracking') {
                     TextHeader = 'TRACKING';
                 } 
-        const headerhide = routeName === 'More' ? null :
-        console.log(headerhide)
+        const headerhide = routeName === 'More' ? null : undefined
+        
          return{
             headerStyle:{
                 backgroundColor:'#ff9100'
@@ -111,8 +148,12 @@ const AppNavigator = createStackNavigator(
             header:null
         }
     },
+    Detail:{
+        screen:SeeDetail
+    },
     Main:TabScreen
      },
+     
     {
         initialRouteName: "EnterApp"
     },

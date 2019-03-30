@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View,ScrollView ,StyleSheet,FlatList} from 'react-native'
+import { Text, View,ScrollView ,StyleSheet,FlatList,ImageBackground} from 'react-native'
 
 import SearchBar from './../Components/Menu/SearchBar'
 import TypeSelect from './../Components/Menu/TypeSelect'
@@ -43,6 +43,7 @@ export default class MenuScreen extends Component {
     return (
 
       <View style={{flex:1,flexDirection:"column"}}>
+      <ImageBackground source={require('../Image/openapp_bg.jpeg')} style={{width:'100%'}}>
         <ScrollView >
           <View style={{flex:1}}>
               <SearchBar/>
@@ -66,7 +67,9 @@ export default class MenuScreen extends Component {
               />
                 
           </View>
+        
         </ScrollView>
+        </ImageBackground>
       </View>
     )
   }
