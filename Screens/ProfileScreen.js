@@ -20,7 +20,7 @@ export default class ProfileScreen extends Component {
               <Profilelist icontype="MaterialCommunityIcons" iconname="email" text="Email" text2="ABC@hotmail.com"/>
             </ListItem>
             <ListItem>
-              <Profilelist icontype="AntDesign" iconname="lock" text="EmPasswordail" text2="********"/>
+              <Profilelist icontype="AntDesign" iconname="lock" text="Password" text2="********"/>
             </ListItem>
             <ListItem>
               <Profilelist icontype="Entypo" iconname="mobile" text="Mobile No." text2="089-2256984"/>

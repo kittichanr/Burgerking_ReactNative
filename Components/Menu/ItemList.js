@@ -43,7 +43,7 @@ class ItemList extends Component {
 
 const styles = StyleSheet.create({
     container: {
-      height: 400,
+      height: 450,
       width: '48%',
       borderRadius: 10,
       borderWidth: 1,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         height:50,
-        marginHorizontal:4
+        marginHorizontal:5
       },
       buttonText:{
         fontFamily: 'Insanibc',

@@ -219,6 +219,7 @@ const AppNavigator = createStackNavigator(
           flex:1,
           alignSelf: 'center' 
         },
+        headerTintColor: 'white',
         headerRight: (<View />)
       }
     },
@@ -237,6 +238,7 @@ const AppNavigator = createStackNavigator(
           textAlign:"center",
           alignSelf: 'center' 
         },
+        headerTintColor: 'white',
         headerRight: (<View />)
       }
     },

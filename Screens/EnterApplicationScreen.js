@@ -24,7 +24,7 @@ export default class EnterApplicationScreen extends React.Component {
   this.timer = null
  }
  componentDidMount(){
-  this.timer = setTimeout(() => {this.setState({timePassed: true})}, 1000)
+  this.timer = setTimeout(() => {this.setState({timePassed: true})}, 3000)
  }
  componentWillUnmount(){
   clearTimeout(this.timer);
