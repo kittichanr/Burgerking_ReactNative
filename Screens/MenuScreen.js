@@ -46,7 +46,7 @@ export default class MenuScreen extends Component {
       <ImageBackground source={require('../Image/openapp_bg.jpeg')} style={{width:'100%'}}>
         <ScrollView >
           <View style={{flex:1}}>
-              <SearchBar/>
+              <SearchBar placeholder='Search for your meal'/>
           </View> 
           <View style={{flex:2}}>
             <ScrollView style={{margin: 15,}} horizontal='true' >

@@ -205,7 +205,22 @@ const AppNavigator = createStackNavigator(
       }
     },
     Help: {
-      screen: HelpScreen
+      screen: HelpScreen,
+      navigationOptions: {
+        title: 'REQUEST HELP',
+        headerStyle: {
+          backgroundColor: '#ff9100'
+        },
+
+        headerTitleStyle: {
+          color: 'white',
+          fontFamily: 'Insanibc',
+          textAlign:"center",
+          flex:1,
+          alignSelf: 'center' 
+        },
+        headerRight: (<View />)
+      }
     },
     Tracking2: {
       screen: TrackingScreen,
@@ -217,8 +232,12 @@ const AppNavigator = createStackNavigator(
 
         headerTitleStyle: {
           color: 'white',
-          fontFamily: 'Insanibc'
-        }
+          fontFamily: 'Insanibc',
+          flex:1,
+          textAlign:"center",
+          alignSelf: 'center' 
+        },
+        headerRight: (<View />)
       }
     },
     Main: TabScreen

@@ -9,12 +9,13 @@ class SearchBar extends Component {
   }
 
   render() {
+    const ph =this.props.placeholder
     return (
           <View style={styles.container}>
             <TextInput
               style={styles.search}
               onSubmitEditing={this._handleTextChange}
-              placeholder={'Search for your meal'}
+              placeholder={ph}
               />
           </View>
     );
