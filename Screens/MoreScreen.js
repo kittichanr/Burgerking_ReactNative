@@ -24,10 +24,11 @@ export default class MoreScreen extends Component {
                 <Text style={styles.text} > TRACKING ORDER </Text>
               </TouchableHighlight>
 
-              {/* <TouchableHighlight onPress={()=>this.props.navigation.navigate('Store')} */}
+              <TouchableHighlight 
+              
                 underlayColor="#ff9100" style={{marginVertical:10}}>
                 <Text style={styles.text} > STORES </Text>
-              {/* </TouchableHighlight> */}
+              </TouchableHighlight>
 
               <TouchableHighlight onPress={()=>this.props.navigation.navigate('Contact')}
                 underlayColor="#ff9100"  style={{marginVertical:10}}>
