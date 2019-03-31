@@ -11,7 +11,6 @@ import MoreScreen from '../Screens/MoreScreen'
 import  MyLevel_RewardScreen from '../Screens/MyLevel_RewardScreen'
 import  All_RewardScreen from '../Screens/All_RewardScreen'
 import  Rabbit_RewardScreen from '../Screens/Rabbit_RewardScreen'
-import  SeeDetail from '../Screens/SeeDetail'
 import Header from '../Components/Header'
 import ProfileScreen from '../Screens/ProfileScreen'
 import StoreScreen from '../Screens/StoreScreen'
@@ -136,7 +135,7 @@ const TabScreen = createBottomTabNavigator(
                 backgroundColor:'#ff9100'
             },
             headerTitle:(
-                <Header routeName={routeName} TextHeader={TextHeader} />
+                <Header routeName={routeName} TextHeader={TextHeader} navigation={navigation}/>
             ),
             header:headerhide
                 
@@ -152,9 +151,6 @@ const AppNavigator = createStackNavigator(
         navigationOptions:{
             header:null
         }
-    },
-    Detail:{
-        screen:SeeDetail
     },
     Profile:{
         screen:ProfileScreen 
@@ -197,7 +193,7 @@ const AppNavigator = createStackNavigator(
               }
         },
     },
-    Main:TabScreen
+    Main:TabScreen,
      },
      
     {

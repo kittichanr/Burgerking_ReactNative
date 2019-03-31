@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View ,Image,StyleSheet} from 'react-native'
+import { Text, View ,Image,StyleSheet,TouchableHighlight} from 'react-native'
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 export default class Header extends Component {
   render() {
@@ -16,7 +16,9 @@ export default class Header extends Component {
             <Image source={require('../Image/burgerking_logo.png')} style={{width:50,height:50,borderRadius:23}}/>
         </View>
         <View style={{flex:1,alignItems:'flex-end'}}>
-        <Icon  name="bag"  style={{fontSize: 40,margin:5,color:'white'}}/>
+        {/* <TouchableHighlight onPress={()=>this.props.navigation.navigate('Policy')}> */}
+            <Icon  name="bag"  style={{fontSize: 40,margin:5,color:'white'}} />
+            {/* </TouchableHighlight> */}
         </View> 
         </View>
         :

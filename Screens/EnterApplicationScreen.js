@@ -83,7 +83,7 @@ _renderItem= ({item}) =>{
         <View style={{flex:1,flexDirection:'row',alignContent:'center'}}>
           
             <View style={styles.seeDetail}>
-              <TouchableOpacity onPress={()=>this.props.navigation.navigate('Detail')}>
+              <TouchableOpacity onPress={()=>this.props.navigation.replace('Main')}>
                 <Text style={[styles.text,{color:'black'}]}>See Details</Text>
               </TouchableOpacity>
             </View>

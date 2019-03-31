@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View,ScrollView } from 'react-native'
+import Typecoupon from '../Components/Reward/Typecoupon'
+import ListReward from '../Components/Reward/ListReward'
 
 export default class All_RewardScreen extends Component {
   render() {
     return (
-      <View>
-        <Text> textInComponent </Text>
+      <View style={{backgroundColor:'#f5f5f5'}}>
+        <ScrollView>
+          <Typecoupon/>
+          <ListReward/>
+          </ScrollView>
       </View>
     )
   }
